@@ -16,6 +16,9 @@ import com.demo.heady.adapter.VariantAdapter
 import com.demo.heady.databinding.ActivityProductDetailBinding
 import com.demo.heady.model.Product
 import com.demo.heady.model.Variant
+import com.demo.heady.utils.COLUMN_ORDER_COUNT
+import com.demo.heady.utils.COLUMN_SHARES
+import com.demo.heady.utils.COLUMN_VIEW_COUNT
 import com.demo.heady.utils.EXTRA_CATEGORY_ID
 import com.demo.heady.viewModel.ProductDetailViewModel
 import kotlinx.android.synthetic.main.activity_product_detail.*
@@ -61,17 +64,17 @@ class ProductDetailActivity : AppCompatActivity() {
         return when (item.itemId) {
 
             R.id.menuByOrder -> {
-                filter("order_count")
+                filter(COLUMN_ORDER_COUNT)
                 true
             }
 
             R.id.menuByProduct -> {
-                filter("view_count")
+                filter(COLUMN_VIEW_COUNT)
                 true
             }
 
             R.id.menuShare->{
-                filter("shares")
+                filter(COLUMN_SHARES)
                 true
             }
 

@@ -2,10 +2,7 @@ package com.demo.heady.db
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Transaction
+import androidx.room.*
 import com.demo.heady.model.*
 import org.w3c.dom.ls.LSInput
 
@@ -133,7 +130,15 @@ abstract class AppDao() {
     @Query("select * from Product")
     abstract fun getAllProduct(): List<Product>
 
-    @Query("select * from Product where id=:categoryId ORDER BY :field ASC ")
-    abstract fun sortByFields(field: String,categoryId : Int =0) : List<Product>
+    @Query("SELECT * FROM Product where fk_categotyId=:categoryId ORDER BY order_count DESC")
+    abstract fun sortByOrderCount(categoryId : Int =0) : List<Product>
+
+    @Query("SELECT * FROM Product where fk_categotyId=:categoryId ORDER BY shares DESC")
+    abstract fun sortByShare(categoryId : Int =0) : List<Product>
+
+    @Query("SELECT * FROM Product where fk_categotyId=:categoryId ORDER BY view_count DESC")
+    abstract fun sortByViewCount(categoryId : Int =0) : List<Product>
+
+
 
 }
