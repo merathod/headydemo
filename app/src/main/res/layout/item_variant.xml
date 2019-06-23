@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:padding="@dimen/dimen_8dp"
+            android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProductName"
+                tools:text="Product Name"
+                android:textSize="@dimen/text_16"
+                android:typeface="monospace"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <View android:layout_width="wrap_content"
+              android:layout_height="1dp"
+              android:layout_marginTop="@dimen/dimen_2dp"
+              android:layout_marginBottom="@dimen/dimen_2dp"
+              app:layout_constraintStart_toStartOf="@id/tvProductName"
+              app:layout_constraintTop_toBottomOf="@id/tvProductName"
+              app:layout_constraintEnd_toEndOf="@id/tvProductName"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvColor"
+                app:layout_constraintTop_toBottomOf="@id/tvProductName"
+                tools:text="Color : Black"
+                android:textSize="@dimen/text_14"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                app:layout_constraintStart_toStartOf="@id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                tools:text="Price : 1000"
+                app:layout_constraintTop_toBottomOf="@id/tvColor"
+                app:layout_constraintStart_toStartOf="@id/tvProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Size : S"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="@id/tvProductName"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

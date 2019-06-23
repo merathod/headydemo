@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuByProduct"
+          android:title="Most Viewed Products"/>
+    <item android:id="@+id/menuByOrder"
+          android:title="Most OrdeRed Products" />
+    <item android:id="@+id/menuShare"
+          android:title="Most ShaRed Products"/>
+    <item android:id="@+id/menuReset"
+          android:title="Reset"/>
+
+</menu>
